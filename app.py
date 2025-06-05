@@ -41,5 +41,10 @@ def enviar_alerta(nome, preco, url):
     print(f"ALERTA DE PREÇO: {nome} por R${preco:.2f} | URL: {url}")
 
 
+def verificar_HTML(response):
+    with open("debug.html", "w", encoding="utf-8") as f:
+        f.write(response.text)
+
+
 url = "https://www.amazon.com.br/Notebook-Lenovo-Ryzen-7335U-Windows/dp/B0DWBS2FCN"
 monitorar_preco(url, 4000.00)
