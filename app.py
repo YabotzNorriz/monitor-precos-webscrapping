@@ -46,5 +46,5 @@ def verificar_HTML(response):
         f.write(response.text)
 
 
-url = "https://www.amazon.com.br/Notebook-Lenovo-Ryzen-7335U-Windows/dp/B0DWBS2FCN"
+url = input("Digite a URL do produto")
 monitorar_preco(url, 4000.00)
